@@ -26,6 +26,7 @@ public class FileScan {
         } else {
             JFileChooser chooser = new JFileChooser();
             target = new File(System.getProperty("user.dir")).toPath();
+            chooser.setCurrentDirectory(target.toFile());
             if(chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
                 target = chooser.getSelectedFile().toPath();
             }
